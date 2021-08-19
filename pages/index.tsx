@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '@components/atoms/Logo'
 import FreeSolo from './Components/input'
 
 
