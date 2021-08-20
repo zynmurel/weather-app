@@ -4,7 +4,7 @@ import CardGrid from './Components/cardgrid'
 
 const Home: React.FC = () => {
   return (
-      <div>
+      <div style={{padding: 5}}>
            <FreeSolo/>
            <CardGrid></CardGrid>
       </div>
