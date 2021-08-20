@@ -5,11 +5,12 @@ import { Grid, Card } from "@material-ui/core";
 const useStyle = makeStyles(theme => ({
   grid:{
        maxWidth: 1200,
-       margin: "auto"
+      margin :"auto"
      },
     card:{
       textAlign: "center",
         padding: theme.spacing(2)
+
     }
 }))
 const CardGrid = () =>{
