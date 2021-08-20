@@ -1,11 +1,12 @@
 import React from 'react'
 import FreeSolo from './Components/input'
-
+import CardGrid from './Components/cardgrid'
 
 const Home: React.FC = () => {
   return (
-      <div style={{"margin": "auto", "background-color": "#cfe8fc", maxWidth: 1200, "margin-top": 50, padding: 20}}>
+      <div>
            <FreeSolo/>
+           <CardGrid></CardGrid>
       </div>
   )
 }

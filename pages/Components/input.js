@@ -6,7 +6,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 export default function FreeSolo() {
     return (
 
-        <div style={{ maxWidth: 1000, "margin": "auto" }}>
+        <div style={{ maxWidth: 1200, "margin": "auto" }}>
             <Autocomplete
                 id="free-solo-demo"
                 freeSolo
