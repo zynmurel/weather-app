@@ -37,7 +37,7 @@
       "@datasets": ["src/datasets"],
       "@assets/*": ["src/assets/*"],
       "@stores/*": ["src/stores/*"],
-      "@stores": ["src/stores"]
+      "@stores": ["src/stores"],
     }
   },
   "exclude": ["node_modules"],

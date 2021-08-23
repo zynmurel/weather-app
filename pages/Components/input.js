@@ -1,12 +1,26 @@
 /* eslint-disable no-use-before-define */
-import React from 'react';
+import React, {useEffect} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import {getSuggestedPlaces} from '../../src/api/weatherService';
+
 
 export default function FreeSolo() {
+    const getPlaces = async () => {
+        const response = await getSuggestedPlaces('Bilar Bohol')
+        console.log('response: %o ', response)
+    }
+
+// mount
+    useEffect(() => {
+        getPlaces()
+    }, [])
+
+
+
     return (
 
-        <div style={{"margin": "auto", maxWidth: 1187, "margin-top": 30, padding: 5}}>
+        <div style={{"margin": "auto", maxWidth: 1200, marginTop: 30}}>
             <Autocomplete
                 id="free-solo-demo"
                 freeSolo
