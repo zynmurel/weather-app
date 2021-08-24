@@ -1,13 +1,13 @@
 import React from 'react'
-import FreeSolo from './Components/input'
-import CardGrid from './Components/cardgrid'
+import FreeSolo from '@components/input'
+import CardGrid from '@components/cardgrid'
 
 const Home: React.FC = () => {
   return (
-      <div >
-           <FreeSolo/>
-           <CardGrid></CardGrid>
-      </div>
+    <div>
+      <FreeSolo />
+      <CardGrid></CardGrid>
+    </div>
   )
 }
 export default Home
