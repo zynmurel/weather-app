@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <FreeSolo />
-      <CardGrid></CardGrid>
+      <CardGrid />
     </div>
   )
 }
