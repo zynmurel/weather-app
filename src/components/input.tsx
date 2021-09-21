@@ -8,7 +8,7 @@ interface Places {
   name: string
   country: string
 }
-const FreeSolo: React.FC = () => {
+const FreeSolo: React.FC<{ setPlace: (place: string) => void }> = ({ setPlace }) => {
   const [places, setPlaces] = useState<Places[]>([])
 
   const getPlaces = async (input?: string) => {
@@ -22,14 +22,22 @@ const FreeSolo: React.FC = () => {
   }
 
   return (
-    <div style={{ margin: 'auto', maxWidth: 1200, marginTop: 30 }}>
+    <div style={{ margin: 'auto', minWidth: '100%', marginTop: 30 }}>
       <Autocomplete
         id="free-solo-demo"
         freeSolo
-        options={places}
-        getOptionLabel={(option) => option.country}
-        renderOption={(option) => option.name}
+        options={places.map((option) => option)}
+        getOptionLabel={(option) => option.name}
+        renderOption={(option) => (
+          <>
+            {option.name}({option.country})
+          </>
+        )}
         filterOptions={(options) => options}
+        onChange={(_e, value) => {
+          // @ts-ignore
+          setPlace(value?.name)
+        }}
         renderInput={(params) => (
           <TextField
             {...params}
